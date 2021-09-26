@@ -7,7 +7,84 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@200;400&display=swap');
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Glory', sans-serif;
+}
+/* .main-nav{
+  width: 100%;
+  height: 100vh;
+  background-image:linear-gradient(rgb(8 32 50),rgb(8 32 50),rgb(8 32 50)), url(../src/images/reactjs.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+} */
+.newColor:focus{
+    background-color: blue;
+    color: white;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper{
+  display: flex;
+}
+.wrapper .static-txt{
+  font-size: 60px;
+  font-weight: 400;
+  color: #fff;
+}
+.wrapper .dynamic-txt{
+  margin-left: 0px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txt li{
+  list-style: none;
+  color: greenyellow;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txt li{
+  position: relative;
+}
+.dynamic-txt li:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background-color: #082032;
+  width: 100%;
+  border-left: 2px solid red;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%,
+  60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
 }
